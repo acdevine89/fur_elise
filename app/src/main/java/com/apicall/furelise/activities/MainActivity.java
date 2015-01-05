@@ -1,6 +1,7 @@
 package com.apicall.furelise.activities;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,8 @@ public class MainActivity extends Activity implements ApiCallback {
         setContentView(R.layout.activity_main);
 
         WundergroundApi.getWundergroundApi().getForecast("MI", "Detroit", this);
+
+        MediaPlayer.create(this, R.raw.fur_elise_valentina_lisitsa).start();
     }
 
     @Override
